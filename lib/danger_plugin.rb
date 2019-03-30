@@ -38,9 +38,9 @@ module Danger
       
       files_to_lint = fetch_files_to_lint(files)
       files_to_report = rubocop(files_to_lint, force_exclusion)
-      # 
-      # return if files_to_report.empty?
-      # return report_failures files_to_report if report_danger
+      
+      return if files_to_report.empty?
+      return report_failures files_to_report if report_danger
 
       # if inline_comment
       #   add_violation_for_each_line(files_to_report, fail_on_inline_comment)
