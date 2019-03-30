@@ -27,16 +27,16 @@ module Danger
     # @return  [void]
     #
     def lint(config = nil)
-      # config = config.is_a?(Hash) ? config : { files: config }
-      # files = config[:files]
-      # force_exclusion = config[:force_exclusion] || false
-      # 
-      # report_danger = config[:report_danger] || false
-      # inline_comment = config[:inline_comment] || false
-      # fail_on_inline_comment = config[:fail_on_inline_comment] || false
-      # summary_comment = config[:summary_comment] || false
-      # 
-      # files_to_lint = fetch_files_to_lint(files)
+      config = config.is_a?(Hash) ? config : { files: config }
+      files = config[:files]
+      force_exclusion = config[:force_exclusion] || false
+      
+      report_danger = config[:report_danger] || false
+      inline_comment = config[:inline_comment] || false
+      fail_on_inline_comment = config[:fail_on_inline_comment] || false
+      summary_comment = config[:summary_comment] || false
+      
+      files_to_lint = fetch_files_to_lint(files)
       files_to_report = rubocop(files_to_lint, force_exclusion)
       # 
       # return if files_to_report.empty?
