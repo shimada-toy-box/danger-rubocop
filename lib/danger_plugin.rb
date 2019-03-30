@@ -48,6 +48,7 @@ module Danger
         # markdown offenses_message(files_to_report) if summary_comment
       end
 
+      nil
     end
 
     private
