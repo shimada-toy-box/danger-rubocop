@@ -37,7 +37,7 @@ module Danger
       # summary_comment = config[:summary_comment] || false
       # 
       # files_to_lint = fetch_files_to_lint(files)
-      # files_to_report = rubocop(files_to_lint, force_exclusion)
+      files_to_report = rubocop(files_to_lint, force_exclusion)
       # 
       # return if files_to_report.empty?
       # return report_failures files_to_report if report_danger
